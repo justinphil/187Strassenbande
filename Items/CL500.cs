@@ -31,7 +31,7 @@ namespace Strassenbande.Items
             item.useTime = 6;
             item.useAnimation = 6;
             item.useStyle = 5;
-            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sound/Item/GzuzShot"); // [insert] Gzuz 187 Sound
+            item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Custom/Gzuz187"); // [insert] Gzuz 187 Sound
 
             item.autoReuse = true;
             item.ranged = true;
