@@ -2,10 +2,15 @@ using Terraria.ModLoader;
 
 namespace Strassenbande
 {
-	public class OpSwordTest : Mod
+	public class Strassenbande : Mod
 	{
-		public OpSwordTest()
+
+
+		public Strassenbande()
 		{
+
+            
+
 		}
 	}
 }

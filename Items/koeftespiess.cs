@@ -44,11 +44,11 @@ namespace Strassenbande.Items
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 
-            player.lifeRegen += 187;
+            player.lifeRegen += 18;
 
-            player.moveSpeed += 18.7f;
-            player.rangedDamage += 18.7f;
-            player.manaCost -= 18.7f;
+            player.moveSpeed += 1.87f;
+            player.allDamage += 1.87f;
+            player.manaCost -= 2;
             player.statLifeMax2 += 187;
             player.statManaMax2 += 187;
             player.noFallDmg = true;

@@ -10,7 +10,7 @@ namespace Strassenbande.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Ayran");
-            Tooltip.SetDefault("Frisch gezapfter Ayran.");
+            Tooltip.SetDefault("Frisch gezapfte Ayran.");
         }
 
         public override void SetDefaults()
@@ -27,6 +27,8 @@ namespace Strassenbande.Items
             item.consumable = true;
             item.rare = ItemRarityID.Red;
             item.value = Item.buyPrice(platinum: 1);
+            item.buffType = mod.BuffType("AyranBuff");
+            item.buffTime = 3600 * 6;
             
         }
 
@@ -39,19 +41,6 @@ namespace Strassenbande.Items
             recipe.AddTile(TileID.AlchemyTable);
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }
-
-        public override bool CanUseItem(Player player)
-        {
-            int buff = mod.BuffType("Ayran");
-            return !player.HasBuff(buff);
-        }
-
-        public override bool UseItem(Player player)
-        {
-            player.AddBuff(mod.BuffType("Ayran"), 3000, false);
-
-            return base.UseItem(player);
         }
 
     }

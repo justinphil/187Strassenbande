@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -7,8 +7,10 @@ namespace Strassenbande.Items
 {
     class StrassenbandeLogo : ModItem
     {
+
+        List<string> customNames = new List<string>{ "Maxwell", "LX", "Gzuz", "BonezMC", "Sa4"};
+
         
-        // string realPlayerName;
 
         public override void SetStaticDefaults()
         {
@@ -43,29 +45,27 @@ namespace Strassenbande.Items
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 
-            
+            if (customNames.Contains(player.name)) { 
+                player.rangedDamage += 18.7f;
+                player.allDamage += 18.7f;
+            }
 
-            player.lifeRegen += 187;
-            
+            player.AddBuff(BuffID.WaterCandle, 999999999, false);
+
+            player.hairColor = Colors.RarityBlue;
+            player.jumpSpeedBoost += 1.87f;
+            player.lifeRegen += 30;
+            player.allDamage += 1.87f;
             player.moveSpeed += 18.7f;
-            player.rangedDamage += 18.7f;
-            player.manaCost -= 18.7f;
+            player.rangedDamage += 1.87f;
+            player.manaCost -= 2f;
             player.statLifeMax2 += 187;
             player.statManaMax2 += 187;
             player.noFallDmg = true;
             player.maxFallSpeed += 187;
-            player.statDefense += 187;
-            // player.name = rndName() + "(" + realPlayerName + ")";
-        }
-
-
-        //private string rndName() {
             
-        //    Random rnd = new Random();            
-        //    string[] customNames = {"Gzuz", "Bonez MC", "Sa4", "LX", "Maxwell" };
-        //    int index = rnd.Next(customNames.Length);
-
-        //    return customNames[index];
-        //}
+            player.statDefense += 20;
+            
+        }
     }
 }

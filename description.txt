@@ -1,1 +1,14 @@
 A Mod dedicated to the 187 Strassenbande.
+
+
+DISCLAIMER: This mod is inteded to be on the more overpowered side.
+
+Included are Weapons, Equipables and a Potion.
+
+The only Weapon currently available is the CL500, it shoots Gzuz (Which is a german Rapper). 
+
+The two Equipables are the "Köftespiess" and "187StrassenbandeLogo".
+These are very overpowered, therefore be used with more Hardcore-Mods.
+
+The Potion ingame is the "Ayran".
+It grants the "Frische Ayran" Buff, which gives you incredible Speed and more.
